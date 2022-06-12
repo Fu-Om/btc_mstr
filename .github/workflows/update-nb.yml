@@ -1,7 +1,7 @@
 name: Update MSTR-BTC notebook
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 jobs:
   update_nb:
@@ -13,7 +13,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: 3.8
           cache: 'pip'
       - name: Install Dependencies
         run: pip install -r requirements.txt
